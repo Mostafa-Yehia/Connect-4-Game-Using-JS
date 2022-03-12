@@ -11,6 +11,8 @@ Connect Four is a two-player board game in which the players take turns dropping
 - Two game levels (Easy or Hard)
 ## Test and Run
 ![demo](https://github.com/mostafahassan097/Connect-4-Game-Using-JS/blob/main/demo.gif)
+## Demo
+https://mostafahassan097.github.io/Connect-4-Game-Using-JS/
 ## Run
 
 Installing Connect 4
