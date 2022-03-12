@@ -9,7 +9,8 @@ Connect Four is a two-player board game in which the players take turns dropping
 - Two game moods (single Player or multi player).
 
 - Two game levels (Easy or Hard)
-
+## Test and Run
+![demo](https://github.com/mostafahassan097/Simple-Java-DBMS/blob/main/gif.gif)
 ## Run
 
 Installing Connect 4
