@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Supermercado+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="overlay">
+</div>
+<div id="overlaywin">
+   
+</div>
+    <div id="main">
+        <h2 class="heading">Connect 4</h2>
+        <div id="animatered"></div>
+        <div id="animatered1"></div>
+        <div id="animatered2"></div>
+        <div id="animateyellow"></div>
+        <div id="animateyellow1"></div>
+        <div id="animateyellow2"></div>
+
+<!-- -->
+        <div class="gameMode">
+            <h1>Select Game Mode</h1>
+            <button name="single" class="mode" type="button" value="Single Player">Single player</button>
+            <br/>
+            <button name="multi" class="mode" type="button" value="Multi Player">Multi player</button>
+        </div>
+        <div class="gameData">
+            <h1>Insert Game Data</h1>
+            <form method="post" name="myForm">
+                <input name="player1" class="data" type="text" placeholder="player name.." required />
+
+                <br />
+                <input name="player2" class="data" type="text" placeholder="player name.." required />
+
+
+                <br />
+                <button name="submit" class="submit" type="button" value="Submit" >Submit</button>
+        </form>
+        </div>
+
+
+        <div class="gameLevel">
+            <h1>Select Game Level</h1>
+            <button name="1" class="level" type="button" value="level 1">Level 1</button>
+            <br />
+            <button name="2" class="level" type="button" value="level 2">Level 2</button>
+        </div>
+
+
+        <div class="gameboard">
+            <h2 class="playmode"></h2>
+
+            <h3 class="player1"></h3>
+            <div class='color1'>
+            </div>
+            <h3 class="player2"> </h3>
+            <div class='color2'>     
+            </div>
+            <br>
+
+            <div class="mainboard">
+            
+                <script>
+                    for( var i = 0 ; i < 6 ; i++)
+                    {
+                        for (var j = 0 ; j <7 ; j++)
+                        {
+                        document.write(`<div done="0" class="circle R${i} C${j}"></div>`)
+                        }
+                      
+                    }
+                </script>
+            
+            </div>
+
+           
+            <div class="game-btns">
+                <button type="button" class="clear-btn" value="Restart" onclick="restart()">Restart</button>
+                <button type="button" class="start-btn" value="Start" onclick="start()">Start Game</button>
+        
+            </div>
+       </div> 
+       
+
+
+    </div>
+
+    
+      
+    <script src="main.js"></script> 
+
+    </body>
+</html>

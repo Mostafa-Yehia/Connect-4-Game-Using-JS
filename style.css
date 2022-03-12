@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+font-family: 'Supermercado One', cursive;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Supermercado One', cursive;
+}
+
+#main {
+  border: 2px solid green;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#eebe00 10%, steelBlue 104%);
+}
+.heading{
+  font-size: 3rem;
+}
+.gameMode {
+  padding: 5%;
+  margin: 10% auto;
+  background-color: SteelBlue;
+  border-radius: 5%;
+  display: none;
+}
+
+.gameData {
+  padding: 5%;
+  margin: 10% auto;
+  background-color: SteelBlue;
+  border-radius: 5%;
+  display: none;
+}
+
+.gameLevel {
+  padding: 5%;
+  margin: 10% auto;
+  background-color: SteelBlue;
+  border-radius: 5%;
+  display: none;
+}
+
+.divAnimate {
+  padding: 5%;
+  margin: 10% auto;
+  background-color: SteelBlue;
+  border-radius: 5%;
+  width: 50%;
+  height: 50%;
+  animation: divAnimation 2s 1;
+  overflow: hidden;
+}
+
+@keyframes divAnimation {
+  from {
+    width: 0%;
+    height: 0%;
+  }
+
+  to {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.divHide {
+  padding: 0%;
+  margin: 0% auto;
+  background-color: SteelBlue;
+  border-radius: 5%;
+  width: 0%;
+  height: 0%;
+  animation: divHide 2s 1;
+  overflow: hidden;
+}
+
+@keyframes divHide {
+  from {
+    width: 50%;
+    height: 50%;
+    padding: 5%;
+    margin: 10% auto;
+  }
+
+  to {
+    width: 0%;
+    height: 0%;
+    padding: 0%;
+    margin: 0% auto;
+  }
+}
+
+.mode, .level, .submit,.clear-btn, .start-btn {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 2% auto;
+}
+
+.mode::before, .level::before, .submit::before, .clear-btn::before, .start-btn::before{
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #22009e, #00ffd5, #ff00c8, #600863);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.mode:active, .level:active, .submit:active, .clear-btn:active, .start-btn:active{
+  color: #000
+}
+
+.mode:active::after, .level:active::after, .submit:active::after, .clear-btn:active:after, .start-btn:active:after{
+  background: transparent;
+}
+
+.mode:hover::before, .level:hover::before, .submit:hover::before,.clear-btn::before, .start-btn::before{
+  opacity: 1;
+}
+
+.mode::after, .level::after, .submit::after, .clear-btn::after, .start-btn::after{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+@keyframes glowing{
+  0% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 400% 0;
+  }
+
+  100% {
+      background-position: 0 0;
+  }
+}
+
+
+h1{
+  margin-bottom: 10%;
+  color: #794C35;
+  font-size: 40px;
+}
+
+
+h1:hover {
+  font-size: 50px;
+  text-shadow: 2px 2px 1px;
+}
+
+
+#animatered {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  animation: movingball1 2.5s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  margin-left: 5%;
+  box-shadow: 5px 5px 5px 5px rgb(97, 96, 96);
+
+}
+#animatered1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  animation: movingball2 2s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  box-shadow: 5px 5px 5px 5px rgb(97, 96, 96);
+
+}
+#animatered2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  animation: movingball3 1.5s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  margin-left: 1%;
+  margin-bottom: 9%;
+  box-shadow: 5px 5px 2px 2px rgb(97, 96, 96);
+
+}
+
+#animateyellow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgb(238, 255, 0);
+  animation: movingball1 2.5s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  margin-left: 90%;
+  box-shadow: 10px 5px 5px 5px rgb(97, 96, 96);
+
+}
+#animateyellow1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgb(238, 255, 0);
+  animation: movingball2 2s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  margin-left: 93%;
+  box-shadow: 10px 5px 5px 5px rgb(97, 96, 96);
+
+}
+#animateyellow2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgb(238, 255, 0);
+  animation: movingball3 1.5s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  margin-left: 95%;
+  box-shadow: 10px 5px 5px 5px rgb(97, 96, 96);
+}
+
+@keyframes movingball1 {
+  from {
+      top: 10vh;
+  }
+
+  to {
+      top: 80vh;
+  }
+}
+@keyframes movingball2{
+  from {
+    top: 10vh;
+}
+
+to {
+    top: 80vh;
+}
+}
+@keyframes movingball3 {
+  from {
+    top: 10vh;
+}
+
+to {
+    top: 80vh;
+}
+}
+
+
+.data{
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family:'Permanent Marker';
+  padding: 1%;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 2% auto;
+  border-color:#B47846 ;
+
+}
+
+/*   Game Layout   */
+
+@keyframes gameboardAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.gameboard {
+  opacity: 0;
+  display: none;
+}
+.gameboardDisplay {
+  animation: gameboardAnim 3s 1;
+  display: block;
+}
+.mainboard {
+  background-color: rgb(3, 3, 126);
+  width:525px;
+  height: 425px;
+  border: 2px soild rgb(0, 0, 102);
+ margin-top: 5%;
+ margin-left: 32%;
+  border-radius: 1%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.circle {
+  width: 54px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  margin: 5px;
+}
+
+.R0 {
+  background-color: aliceblue;
+  cursor: pointer;
+  animation: pointerAnimation 1s infinite;
+  animation-direction:alternate;
+}
+
+@keyframes pointerAnimation {
+  from {
+    background-color: aliceblue;
+  }
+
+  to {
+    background-color: Grey;
+  }
+}
+
+
+.btn {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 5px;
+  color: cornsilk;
+  border-radius: 8%;
+}
+.game-btns {
+
+}
+.clear-btn{
+  margin-right: 18% ;
+}
+
+.player1 {
+  float: left;
+  margin: 30px;
+  font-size: 40px;
+ 
+}
+
+.player2 {
+  float: right;
+  margin: 30px;
+  font-size: 40px;
+  
+}
+
+
+
+#overlay {
+  position: absolute;
+  background-color: rgb(82, 30, 180);
+  opacity: 0;
+  width: 0vw;
+  height: 0vh;
+
+}
+
+#overlaywin {
+  text-align: center;
+  position: fixed;
+  display: none;
+  width: 500px;
+  margin-left: 33%;
+  margin-top: 20%;
+  height: 250px;
+  display: none;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 3%;
+
+}
+#overlaywin >h1{
+  padding-top: 3rem;
+}
+
+.playag
+{
+  background-color:rgb(248, 44, 44);
+  color: white;
+  border-radius: 12%;
+  padding: 10px;
+  font-size: 22px;
+  margin-right: 35px;
+}
+.home{
+  background-color: #083e7c;
+  color: white;
+  border-radius: 12%;
+  padding: 10px;
+  font-size: 22px;
+  margin: 10px;
+}
+
+@media screen and (orientation: portrait) {
+  .mainboard {
+    width: 90%;
+    margin: 10% auto;
+  }
+  .circle {
+    width: 40px;
+    height: 38px;
+    margin: 5px;
+  }
+}
+
