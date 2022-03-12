@@ -321,7 +321,7 @@ to {
   height: 425px;
   border: 2px soild rgb(0, 0, 102);
  margin-top: 5%;
- margin-left: 32%;
+ margin-left: 35%;
   border-radius: 1%;
   display: flex;
   justify-content: space-between;
@@ -435,7 +435,7 @@ to {
 
 @media screen and (orientation: portrait) {
   .mainboard {
-    width: 90%;
+    width: 80%;
     margin: 10% auto;
   }
   .circle {
